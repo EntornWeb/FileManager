@@ -32,7 +32,7 @@ class FileManagerExtension extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            'thumb' => new \Twig_Filter_Method($this, 'thumb'),
+            'thumb' => new \Twig_SimpleFilter('thumb', array($this, 'thumb')),
         );
     }
 
